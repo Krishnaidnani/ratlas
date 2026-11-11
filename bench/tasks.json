@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "id": "indexing-pipeline",
+      "task": "update a source file and preserve incremental symbol identities",
+      "focus_files": ["src/repo_atlas/indexer.py", "src/repo_atlas/diff.py"],
+      "gold_files": ["src/repo_atlas/indexer.py", "src/repo_atlas/diff.py"],
+      "baseline_files": ["src/repo_atlas/indexer.py", "src/repo_atlas/diff.py"],
+      "budget": 1800
+    },
+    {
+      "id": "language-extraction",
+      "task": "extract classes and call references from TypeScript and Java",
+      "focus_files": ["src/repo_atlas/parser.py", "tests/test_languages.py"],
+      "gold_files": ["src/repo_atlas/parser.py", "tests/test_languages.py"],
+      "baseline_files": ["src/repo_atlas/parser.py", "tests/test_languages.py"],
+      "budget": 1800
+    },
+    {
+      "id": "context-ranking",
+      "task": "rank repository files and fit symbol skeletons to a token budget",
+      "focus_files": ["src/repo_atlas/engine.py"],
+      "gold_files": ["src/repo_atlas/engine.py", "tests/test_engine.py"],
+      "baseline_files": ["src/repo_atlas/engine.py", "tests/test_engine.py"],
+      "budget": 1800
+    },
+    {
+      "id": "mcp-surface",
+      "task": "register MCP tools and provide repository onboarding resources",
+      "focus_files": ["src/repo_atlas/server.py"],
+      "gold_files": ["src/repo_atlas/server.py", "tests/test_engine.py"],
+      "baseline_files": ["src/repo_atlas/server.py", "tests/test_engine.py"],
+      "budget": 1200
+    },
+    {
+      "id": "git-replay",
+      "task": "compare incremental index state with a fresh index over commit history",
+      "focus_files": ["src/repo_atlas/replay.py", "tests/test_replay.py"],
+      "gold_files": ["src/repo_atlas/replay.py", "tests/test_replay.py"],
+      "baseline_files": ["src/repo_atlas/replay.py", "tests/test_replay.py"],
+      "budget": 1400
+    }
+  ]
+}

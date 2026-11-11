@@ -1,0 +1,18 @@
+site_name: RepoAtlas
+site_description: Local-first structural repository maps for coding assistants
+repo_url: https://example.invalid/repo-atlas
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.footer
+    - content.code.copy
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Installation: installation.md
+  - Configuration: configuration.md
+  - MCP and CLI: tools.md
+  - Limitations: limitations.md

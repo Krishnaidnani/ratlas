@@ -1,0 +1,7 @@
+.venv/
+.pytest_cache/
+.ratlas/
+__pycache__/
+*.py[cod]
+build/
+dist/

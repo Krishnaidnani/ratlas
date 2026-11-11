@@ -1,0 +1,26 @@
+[index]
+languages = ["python", "typescript", "java"]
+include = ["**/*.py", "**/*.pyi", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.java"]
+exclude = ["**/.git/**", "**/.venv/**", "**/__pycache__/**", "**/build/**", "**/dist/**"]
+max_file_bytes = 1000000
+bulk_threshold_pct = 30
+
+[resolve]
+confidence_floor = 0.15
+precise_provider = "none"
+# For SCIP overrides, set precise_provider = "scip" and provide normalized mapping JSON.
+# scip_mapping = ".ratlas/scip-map.json"
+
+[budget]
+default_map_tokens = 2000
+default_context_tokens = 4000
+max_tokens = 16000
+safety_factor = 0.9
+tokenizer = "cl100k_base"
+
+[privacy]
+never_index = [".env*", "**/*.pem", "**/id_rsa*", "**/*.p12", "**/secrets/**"]
+redact_patterns = ["(?i)(api[_-]?key|token|secret|password)\\s*[:=]\\s*\\S+"]
+
+[store]
+path = ".ratlas/index.db"
