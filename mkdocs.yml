@@ -1,6 +1,6 @@
 site_name: RepoAtlas
 site_description: Local-first structural repository maps for coding assistants
-repo_url: https://example.invalid/repo-atlas
+repo_url: https://github.com/Krishnaidnani/ratlas
 docs_dir: docs
 site_dir: site
 theme:
